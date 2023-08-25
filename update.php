@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php include 'config.php'; ?>
 <div id="main-content">
     <h2>Edit Record</h2>
     <form class="post-form" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
@@ -11,16 +12,16 @@
 
     <?php
     if(isset($_POST['showbtn'])):
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "php-crud";
+        // $servername = "localhost";
+        // $username = "root";
+        // $password = "";
+        // $database = "php-crud";
 
-        $conn = new mysqli($servername, $username, $password, $database);
+        // $conn = new mysqli($servername, $username, $password, $database);
 
-        if($conn->connect_error){
-            die("Connection Failed");
-        } 
+        // if($conn->connect_error){
+        //     die("Connection Failed");
+        // } 
 
         $stu_id = $_POST['sid'];
 

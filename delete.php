@@ -1,18 +1,19 @@
 <?php include 'header.php'; ?>
+<?php include 'config.php'; ?>
 
 <?php
 
 if(isset($_POST['deletebtn'])){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "php-crud";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $database = "php-crud";
 
-    $conn = new mysqli($servername, $username, $password, $database);
+    // $conn = new mysqli($servername, $username, $password, $database);
 
-    if($conn->connect_error){
-        die("Connection Failed");
-    } 
+    // if($conn->connect_error){
+    //     die("Connection Failed");
+    // } 
 
     $stu_id = $_POST['sid'];
 
@@ -21,7 +22,7 @@ if(isset($_POST['deletebtn'])){
     // Execute the SQL statement
     if ($conn->query($sql)) {
 
-        header("Location: http://localhost/php/php-crud/index.php");
+        header("Location: {$hostName}/php/php-crud/index.php");
         exit();
     }
 }
